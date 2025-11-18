@@ -1,25 +1,28 @@
 import { useEffect } from 'react';
-import { Stack } from 'expo-router';
+import { Stack, useRouter, useSegments } from 'expo-router';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useColorScheme } from 'react-native';
-import { useAuthStore } from '@/store/authStore';
 import { useThemeStore } from '@/store/themeStore';
 import '../global.css';
 
 export default function RootLayout() {
   const systemColorScheme = useColorScheme();
-  const checkAuth = useAuthStore((state) => state.checkAuth);
   const setColorScheme = useThemeStore((state) => state.setColorScheme);
+  const router = useRouter();
+  const segments = useSegments();
 
   useEffect(() => {
-    checkAuth();
     setColorScheme(systemColorScheme);
+
+    // Auto redirect to home (no auth required for Calculator app)
+    if (segments.length === 0 || segments[0] === '(auth)') {
+      router.replace('/(tabs)');
+    }
   }, [systemColorScheme]);
 
   return (
     <SafeAreaProvider>
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(auth)" />
         <Stack.Screen name="(tabs)" />
       </Stack>
     </SafeAreaProvider>
