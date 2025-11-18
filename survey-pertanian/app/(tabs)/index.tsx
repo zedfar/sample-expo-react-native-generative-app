@@ -5,6 +5,7 @@ import { useAuthStore } from '@/store/authStore';
 import { useSurveyStore } from '@/store/surveyStore';
 import { Card } from '@/components/common/Card';
 import { Sprout, TrendingUp, MapPin, Users } from 'lucide-react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
   const colorScheme = useThemeStore((state) => state.colorScheme);
@@ -45,7 +46,7 @@ export default function HomeScreen() {
       className="flex-1"
       style={{ backgroundColor: isDark ? '#000' : '#F9FAFB' }}
     >
-      <View className="p-4">
+      <SafeAreaView className="p-4">
         <View style={styles.header}>
           <Sprout size={40} color="#10B981" />
           <Text className={`text-2xl font-bold mt-2 mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -98,7 +99,7 @@ export default function HomeScreen() {
             • Mendukung mode gelap/terang
           </Text>
         </Card>
-      </View>
+      </SafeAreaView>
     </ScrollView>
   );
 }

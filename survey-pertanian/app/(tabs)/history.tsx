@@ -11,6 +11,7 @@ import { useThemeStore } from '@/store/themeStore';
 import { useSurveyStore } from '@/store/surveyStore';
 import { Card } from '@/components/common/Card';
 import { FileText, MapPin, Calendar } from 'lucide-react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HistoryScreen() {
   const colorScheme = useThemeStore((state) => state.colorScheme);
@@ -62,7 +63,7 @@ export default function HistoryScreen() {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: isDark ? '#000' : '#F9FAFB' }]}>
+    <SafeAreaView style={[styles.container, { backgroundColor: isDark ? '#000' : '#F9FAFB' }]}>
       <View style={styles.header}>
         <Text style={[styles.title, { color: isDark ? '#FFFFFF' : '#111827' }]}>
           Riwayat Survey
@@ -182,7 +183,7 @@ export default function HistoryScreen() {
           )}
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 

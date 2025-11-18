@@ -11,6 +11,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, RefreshControl, ActivityIndicator } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useThemeStore } from '@/store/themeStore';
 import { Card } from '@/components/common/Card';
 import { Button } from '@/components/common/Button';
@@ -123,7 +124,7 @@ export default function NewsListScreen() {
 
   // Main content
   return (
-    <View className="flex-1" style={{ backgroundColor: isDark ? '#000' : '#F9FAFB' }}>
+    <SafeAreaView className="flex-1" style={{ backgroundColor: isDark ? '#000' : '#F9FAFB' }}>
       <FlatList
         data={news}
         renderItem={renderItem}
@@ -133,6 +134,6 @@ export default function NewsListScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor="#3b82f6" />
         }
       />
-    </View>
+    </SafeAreaView>
   );
 }
