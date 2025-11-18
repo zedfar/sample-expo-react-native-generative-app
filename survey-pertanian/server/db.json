@@ -1,0 +1,120 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "name": "Admin User",
+      "role": "admin",
+      "status": "active",
+      "avatar": "https://i.pravatar.cc/150?u=admin@example.com",
+      "about": "System administrator",
+      "location": "Jakarta, Indonesia",
+      "phone": "+62812345678",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "email": "user@example.com",
+      "password": "user123",
+      "name": "John Doe",
+      "role": "user",
+      "status": "active",
+      "avatar": "https://i.pravatar.cc/150?u=user@example.com",
+      "createdAt": "2024-01-15T10:30:00.000Z",
+      "updatedAt": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "id": "3",
+      "email": "inactive@example.com",
+      "password": "user123",
+      "name": "Jane Smith",
+      "role": "user",
+      "status": "inactive",
+      "avatar": "https://i.pravatar.cc/150?u=inactive@example.com",
+      "createdAt": "2024-02-01T08:00:00.000Z",
+      "updatedAt": "2024-02-01T08:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Electronics",
+      "slug": "electronics",
+      "description": "Electronic devices and accessories",
+      "icon": "📱",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "2",
+      "name": "Food & Beverage",
+      "slug": "food-beverage",
+      "description": "Food items and beverages",
+      "icon": "🍔",
+      "color": "#ef4444"
+    },
+    {
+      "id": "3",
+      "name": "Clothing",
+      "slug": "clothing",
+      "description": "Clothing and fashion items",
+      "icon": "👕",
+      "color": "#8b5cf6"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Smartphone",
+      "categoryId": "1",
+      "unit": "pcs",
+      "stockSystem": 50,
+      "stockPhysical": 48,
+      "minStock": 10,
+      "price": 5000000,
+      "description": "Latest smartphone with advanced features",
+      "createdAt": "2024-01-10T00:00:00.000Z",
+      "updatedAt": "2024-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "name": "Wireless Earbuds",
+      "categoryId": "1",
+      "unit": "pcs",
+      "stockSystem": 8,
+      "stockPhysical": 8,
+      "minStock": 15,
+      "price": 500000,
+      "description": "Bluetooth earbuds with noise cancellation (Low Stock)",
+      "createdAt": "2024-01-15T00:00:00.000Z",
+      "updatedAt": "2024-01-15T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "name": "Mineral Water",
+      "categoryId": "2",
+      "unit": "bottle",
+      "stockSystem": 200,
+      "stockPhysical": 195,
+      "minStock": 50,
+      "price": 5000,
+      "description": "Pure mineral water 600ml",
+      "createdAt": "2024-01-20T00:00:00.000Z",
+      "updatedAt": "2024-01-20T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "name": "T-Shirt",
+      "categoryId": "3",
+      "unit": "pcs",
+      "stockSystem": 100,
+      "stockPhysical": 98,
+      "minStock": 20,
+      "price": 150000,
+      "description": "Cotton t-shirt, various colors",
+      "createdAt": "2024-01-25T00:00:00.000Z",
+      "updatedAt": "2024-01-25T00:00:00.000Z"
+    }
+  ]
+}
