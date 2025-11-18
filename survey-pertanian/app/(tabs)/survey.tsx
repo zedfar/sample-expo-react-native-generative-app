@@ -22,6 +22,7 @@ import {
   YIELD_UNITS,
 } from '@/types/survey';
 import { CheckCircle } from 'lucide-react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function SurveyScreen() {
   const router = useRouter();
@@ -151,7 +152,7 @@ export default function SurveyScreen() {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: isDark ? '#000' : '#F9FAFB' }]}>
+    <SafeAreaView style={[styles.container, { backgroundColor: isDark ? '#000' : '#F9FAFB' }]}>
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <CheckCircle size={32} color="#10B981" />
@@ -280,7 +281,7 @@ export default function SurveyScreen() {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
