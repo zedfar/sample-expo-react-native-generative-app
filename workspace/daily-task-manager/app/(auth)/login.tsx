@@ -1,0 +1,87 @@
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, KeyboardAvoidingView, Platform } from 'react-native';
+import { Link } from 'expo-router';
+import { useAuthStore } from '@/store/authStore';
+import { useTheme } from '@/hooks/useTheme';
+import { Button } from '@/components/common/Button';
+
+export default function LoginScreen() {
+  const login = useAuthStore((state) => state.login);
+  const { colors, isDark } = useTheme();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async () => {
+    if (!email || !password) return;
+
+    setLoading(true);
+    try {
+      await login(email, password);
+    } catch (error) {
+      console.error('Login failed:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      className="flex-1"
+      style={{ backgroundColor: isDark ? '#000' : '#fff' }}
+    >
+      <View className="flex-1 justify-center px-6">
+        <Text className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+          Welcome Back
+        </Text>
+
+        <View className="mb-4">
+          <TextInput
+            className={`border rounded-lg px-4 py-3 ${
+              isDark ? 'border-gray-700 text-white' : 'border-gray-300 text-gray-900'
+            }`}
+            placeholder="Email"
+            placeholderTextColor={isDark ? '#9CA3AF' : '#6B7280'}
+            value={email}
+            onChangeText={setEmail}
+            keyboardType="email-address"
+            autoCapitalize="none"
+          />
+        </View>
+
+        <View className="mb-6">
+          <TextInput
+            className={`border rounded-lg px-4 py-3 ${
+              isDark ? 'border-gray-700 text-white' : 'border-gray-300 text-gray-900'
+            }`}
+            placeholder="Password"
+            placeholderTextColor={isDark ? '#9CA3AF' : '#6B7280'}
+            value={password}
+            onChangeText={setPassword}
+            secureTextEntry
+          />
+        </View>
+
+        <Button
+          title="Sign In"
+          onPress={handleLogin}
+          loading={loading}
+          disabled={!email || !password}
+        />
+
+        <View className="flex-row justify-center mt-6">
+          <Text className={isDark ? 'text-gray-400' : 'text-gray-600'}>
+            Don't have an account?{' '}
+          </Text>
+          <Link href="/(auth)/register" asChild>
+            <TouchableOpacity>
+              <Text className="text-blue-500 font-semibold">Sign Up</Text>
+            </TouchableOpacity>
+          </Link>
+        </View>
+      </View>
+    </KeyboardAvoidingView>
+  );
+}
