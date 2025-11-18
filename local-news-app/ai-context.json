@@ -1,0 +1,14 @@
+{
+  "screensPath": "app",
+  "componentsPath": "src/components",
+  "hooksPath": "src/hooks",
+  "servicesPath": "src/services",
+  "storePath": "src/store",
+  "typesPath": "src/types",
+  "utilsPath": "src/utils",
+  "themePath": "src/theme",
+  "examples": "examples",
+  "aiGuide": "AI_GUIDE.md",
+  "rules": "GENERATE_RULES.md",
+  "conventions": "CONVENTIONS.md"
+}
