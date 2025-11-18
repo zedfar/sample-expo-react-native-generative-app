@@ -101,3 +101,5 @@ __generated__
 .DS_Store
 
 # @end expo-cli
+
+.claude
