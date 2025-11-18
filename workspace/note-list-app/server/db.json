@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "name": "Admin User",
+      "role": "admin",
+      "status": "active",
+      "avatar": "https://i.pravatar.cc/150?u=admin@example.com",
+      "about": "System administrator",
+      "location": "Jakarta, Indonesia",
+      "phone": "+62812345678",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "email": "user@example.com",
+      "password": "user123",
+      "name": "John Doe",
+      "role": "user",
+      "status": "active",
+      "avatar": "https://i.pravatar.cc/150?u=user@example.com",
+      "createdAt": "2024-01-15T10:30:00.000Z",
+      "updatedAt": "2024-01-15T10:30:00.000Z"
+    }
+  ],
+  "notes": [
+    {
+      "id": "1",
+      "title": "Welcome to Note List App",
+      "content": "This is your first note. You can create, edit, and organize your notes here. Use categories to keep your notes organized!",
+      "category": "personal",
+      "color": "#3b82f6",
+      "isPinned": true,
+      "createdAt": "2024-11-18T10:00:00.000Z",
+      "updatedAt": "2024-11-18T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Project Meeting Notes",
+      "content": "Discussed Q4 goals and deliverables. Action items: 1) Finalize roadmap, 2) Schedule team sync, 3) Update documentation",
+      "category": "work",
+      "color": "#ef4444",
+      "isPinned": true,
+      "createdAt": "2024-11-17T14:30:00.000Z",
+      "updatedAt": "2024-11-17T14:30:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "App Ideas",
+      "content": "Brainstorming new app features: dark mode toggle, search functionality, category filters, note export to PDF",
+      "category": "ideas",
+      "color": "#8b5cf6",
+      "isPinned": false,
+      "createdAt": "2024-11-16T09:15:00.000Z",
+      "updatedAt": "2024-11-16T09:15:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Edge Case: This is a Very Long Note Title That Might Break Your UI Layout If Not Handled Properly With Text Overflow",
+      "content": "Testing edge cases is important for robust applications. This note has an extremely long title to test text truncation and overflow handling in the UI.",
+      "category": "other",
+      "color": "#10b981",
+      "isPinned": false,
+      "createdAt": "2024-11-15T16:45:00.000Z",
+      "updatedAt": "2024-11-15T16:45:00.000Z"
+    }
+  ]
+}
