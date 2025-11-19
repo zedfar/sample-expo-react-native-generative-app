@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "name": "Admin User",
+      "role": "admin",
+      "status": "active",
+      "avatar": "https://i.pravatar.cc/150?u=admin@example.com",
+      "about": "System administrator and task coordinator",
+      "location": "Jakarta, Indonesia",
+      "phone": "+62812345678",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "email": "user@example.com",
+      "password": "user123",
+      "name": "John Doe",
+      "role": "user",
+      "status": "active",
+      "avatar": "https://i.pravatar.cc/150?u=user@example.com",
+      "about": "Software developer and productivity enthusiast",
+      "location": "Bandung, Indonesia",
+      "phone": "+62823456789",
+      "createdAt": "2024-01-15T10:30:00.000Z",
+      "updatedAt": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "id": "3",
+      "email": "inactive@example.com",
+      "password": "user123",
+      "name": "Jane Smith",
+      "role": "user",
+      "status": "inactive",
+      "avatar": "https://i.pravatar.cc/150?u=inactive@example.com",
+      "createdAt": "2024-02-01T08:00:00.000Z",
+      "updatedAt": "2024-02-01T08:00:00.000Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Complete project proposal",
+      "description": "Write and submit the project proposal for the new mobile app development",
+      "status": "in_progress",
+      "priority": "high",
+      "dueDate": "2024-11-20T00:00:00.000Z",
+      "userId": "2",
+      "createdAt": "2024-11-18T08:00:00.000Z",
+      "updatedAt": "2024-11-18T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Review code changes",
+      "description": "Review pull request #123 and provide feedback",
+      "status": "pending",
+      "priority": "medium",
+      "dueDate": "2024-11-19T00:00:00.000Z",
+      "userId": "2",
+      "createdAt": "2024-11-17T14:00:00.000Z",
+      "updatedAt": "2024-11-17T14:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Update documentation",
+      "description": "Update API documentation with new endpoints",
+      "status": "completed",
+      "priority": "low",
+      "dueDate": "2024-11-18T00:00:00.000Z",
+      "userId": "2",
+      "createdAt": "2024-11-15T09:00:00.000Z",
+      "updatedAt": "2024-11-18T11:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Edge case: Very long task title that might break the UI layout if not handled properly with text truncation",
+      "description": "This is an edge case task to test how the UI handles very long task titles and descriptions",
+      "status": "pending",
+      "priority": "low",
+      "dueDate": "2024-11-25T00:00:00.000Z",
+      "userId": "2",
+      "createdAt": "2024-11-18T12:00:00.000Z",
+      "updatedAt": "2024-11-18T12:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "title": "Team meeting preparation",
+      "description": "Prepare slides and agenda for weekly team meeting",
+      "status": "pending",
+      "priority": "high",
+      "dueDate": "2024-11-16T00:00:00.000Z",
+      "userId": "2",
+      "createdAt": "2024-11-14T10:00:00.000Z",
+      "updatedAt": "2024-11-14T10:00:00.000Z"
+    }
+  ]
+}
